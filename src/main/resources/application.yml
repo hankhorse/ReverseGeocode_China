@@ -6,6 +6,6 @@ server:
 
 jetgeo:
   level: district
-  geo-data-parent-path: D:\JetGeo\jetgeo-main\data\geodata  #geodata文件夹所在位置，resource/data下面geodata.7z解压后文件夹位置
-  geo-data-country-path: C:\Users\YLXT01\Desktop\CN.txt   #CN.txt村镇所在文件位置,见resource/data位置
+  geo-data-parent-path: D:\JetGeo\jetgeo-main\data\geodata  #geodata文件夹所在位置，resource下面geodata.part解压后文件夹位置
+  geo-data-country-path: C:\Users\YLXT01\Desktop\CN.txt   #CN.txt村镇所在文件位置,见resource位置
 
