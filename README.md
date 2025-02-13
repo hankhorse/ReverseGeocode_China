@@ -51,5 +51,13 @@ http://localhost:5555/localGeo/getGeo
 }
 ```
 
+## 数据更新问题：
+
+> ①geodata数据更新可前往linG5821大佬的项目中获取：https://github.com/linG5821/jetgeo/tree/main/data
+
+> ②CN.txt可前往地址：http://download.geonames.org/export/dump/ 下载CN.RAR文件并解压
+
+
+
 
 
