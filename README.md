@@ -15,6 +15,9 @@
 ```yaml
   geo-data-parent-path: D:\JetGeo\jetgeo-main\data\geodata  #geodata文件夹所在位置，resource/data下面geodata.7z解压后文件夹位置
   geo-data-country-path: C:\Users\YLXT01\Desktop\CN.txt   #CN.txt村镇所在文件位置,见resource/data位置
+  coordinate:
+    input-system: wgs84 #请求入参坐标系：wgs84/gcj02/bd09
+    data-system: wgs84 #本地数据坐标系，默认保持历史行为不转换
  ```
 ## 项目运行效果
 
@@ -37,7 +40,29 @@ http://localhost:5555/localGeo/getGeo
 }
 ```
 
-### ④返回结果：
+### ④批量请求参数：
+
+仍然使用同一个接口，批量时可以直接传数组：
+
+```json
+[
+    {"lng":"116.56183", "lat":"35.320279"},
+    {"lng":"116.404", "lat":"39.915"}
+]
+```
+
+也可以传包装对象：
+
+```json
+{
+    "points": [
+        {"lng":"116.56183", "lat":"35.320279"},
+        {"lng":"116.404", "lat":"39.915"}
+    ]
+}
+```
+
+### ⑤返回结果：
 
 ```json
 {

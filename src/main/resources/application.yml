@@ -6,6 +6,9 @@ server:
 
 jetgeo:
   level: district
-  geo-data-parent-path: D:\JetGeo\jetgeo-main\data\geodata  #geodata文件夹所在位置，resource下面geodata.part解压后文件夹位置
-  geo-data-country-path: C:\Users\YLXT01\Desktop\CN.txt   #CN.txt村镇所在文件位置,见resource位置
+  geo-data-parent-path: D:\elseProj\ReverseGeocode_China\src\main\resources\geodata  #geodata文件夹所在位置，resource下面geodata.part解压后文件夹位置
+  geo-data-country-path: D:\elseProj\ReverseGeocode_China\src\main\resources\CN\CN.txt   #CN.txt村镇所在文件位置,见resource位置
+  coordinate:
+    input-system: wgs84 #请求入参坐标系：wgs84/gcj02/bd09
+    data-system: wgs84 #本地数据坐标系，默认保持历史行为不转换
 

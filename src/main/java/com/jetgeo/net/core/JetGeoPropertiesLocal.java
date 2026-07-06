@@ -28,6 +28,18 @@ public class JetGeoPropertiesLocal {
     private LevelEnum level;
 
     /**
+     * 请求入参使用的坐标系
+     */
+    @Value("${jetgeo.coordinate.input-system:wgs84}")
+    private String inputCoordinateSystem;
+
+    /**
+     * 本地数据使用的坐标系，默认与历史逻辑保持一致
+     */
+    @Value("${jetgeo.coordinate.data-system:wgs84}")
+    private String dataCoordinateSystem;
+
+    /**
      * S2 最小/最大单元格级别 调整前请务必先了解S2算法
      */
     private int s2MinLevel = 11;
@@ -70,6 +82,32 @@ public class JetGeoPropertiesLocal {
 
     public void setLevel(LevelEnum level) {
         this.level = level;
+    }
+
+    /**
+     * 获取请求入参坐标系。
+     *
+     * @return 请求入参坐标系
+     */
+    public CoordinateSystem getInputCoordinateSystem() {
+        return CoordinateSystem.fromConfig(inputCoordinateSystem);
+    }
+
+    public void setInputCoordinateSystem(String inputCoordinateSystem) {
+        this.inputCoordinateSystem = inputCoordinateSystem;
+    }
+
+    /**
+     * 获取本地数据坐标系。
+     *
+     * @return 本地数据坐标系
+     */
+    public CoordinateSystem getDataCoordinateSystem() {
+        return CoordinateSystem.fromConfig(dataCoordinateSystem);
+    }
+
+    public void setDataCoordinateSystem(String dataCoordinateSystem) {
+        this.dataCoordinateSystem = dataCoordinateSystem;
     }
 
     public int getS2MinLevel() {
