@@ -83,6 +83,7 @@ http://localhost:5555/localGeo/getGeo
 > ②CN.txt可前往地址：http://download.geonames.org/export/dump/ 下载CN.RAR文件并解压
 
 
-
+## 如果有更优的服务器可以部署，直接参考这个文章，精度更优
+> https://github.com/komoot/photon
 
 
